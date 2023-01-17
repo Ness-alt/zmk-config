@@ -17,4 +17,6 @@ include:
     shield: crbn
   - board: nice_nano_v2
     shield: eek
+  - board: nice_nano_v2
+    shield: chocv
 
