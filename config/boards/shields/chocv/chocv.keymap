@@ -46,8 +46,8 @@
 // |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&kp EXCL &kp AT &kp HASH  &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR   &kp RPAR
+&kp F10 &kp F2  &kp F3    &kp F4   &kp F5      &kp MINUS   &kp EQUAL &kp LBKT        &kp RBKT   &kp PIPE
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans     &trans  &trans     &trans     &trans          &trans  
                         >;
@@ -68,5 +68,20 @@
                  &trans &trans &trans    &trans &trans &trans 
                         >;
                 };
+
+                fun_layer {
+// -----------------------------------------------------------------------------------------
+// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
+// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
+// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
+//             |     |     |     |   |  0  |  .  |     |
+                        bindings = <
+   &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
+                 &trans &trans &trans    &trans &trans &trans 
+                        >;
+                };
+
         };
 };
