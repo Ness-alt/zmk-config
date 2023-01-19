@@ -62,10 +62,10 @@
 // |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans
-                 &trans &trans &trans    &trans &trans &trans 
+   &trans &trans        &kp UP          &trans          &trans     &kp TAB      &kp HOME    &trans  &kp END         &kp DEL
+   &trans &kp LEFT      &kp DOWN        &kp RIGHT       &trans     &kp LEFT     &kp DOWN    &kp UP  &kp RIGHT       &trans
+   &trans &trans        &trans          &trans          &trans     &trans       &trans      &trans  &trans          &trans
+                        &trans          &trans          &trans     &trans       &trans      &trans
                         >;
                 };
 
