@@ -19,10 +19,34 @@
             key-positions = <1 2>;
             bindings = <&kp ESC>;
          };
+
+ compatible = "zmk,combos";
+        combo_ent {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RET>;
+         };
+
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
+        };
+
+        combo_bspc2 {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp BSPC>;
+        };
+        combo_lshift {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&sk LSHIFT>;
+        };
+        combo_rshift {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&sk RSHIFT>;
         };
     };
 
@@ -34,7 +58,8 @@
 ╰─────╮30 31 32│ │33 34 35╭─────╯
       ╰────────╯ ╰────────╯         */
 
-
+//sticky keys for mods example from duckyb https://github.com/duckyb/zmk-sweep/blob/main/config/cradio.keymap
+//&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT
 
 
 //
@@ -42,43 +67,44 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
+        // -----------------------------------------------------------------------------------------
+        // |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
+        // |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
+        // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
+        //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-    &kp Q        &kp W  &kp E   &kp R   &kp T            &kp Y  &kp U   &kp I           &kp O           &kp P
-   &lt 3 A      &kp S   &kp D   &kp F   &kp G            &kp H  &kp J   &kp K           &kp L           &kp SEMI
-   &mt LSHIFT Z &kp X   &kp C   &kp V   &kp B            &kp N  &kp M   &kp COMMA       &kp DOT         &mt RSHIFT FSLH
-     &mt LCTRL ESC   &mt LGUI TAB   &lt 2 SPACE    &lt 1 SPACE   &mt RGUI RET   &mt RALT BSPC
-                        >; 
-                };
+        &kp Q        &kp W   &kp E   &kp R   &kp T            &kp Y  &kp U   &kp I           &kp O           &kp P
+        &lt 3 A      &kp S   &kp D   &kp F   &kp G            &kp H  &kp J   &kp K           &kp L           &kp SEMI
+        &mt LSHIFT Z &kp X   &kp C   &kp V   &kp B            &kp N  &kp M   &kp COMMA       &kp DOT         &mt RSHIFT FSLH
+        &mt LCTRL ESC &mt LGUI TAB   &lt 2 SPACE    &lt 1 SPACE   &mt RGUI RET   &mt RALT BSPC
+                                >; 
+                        };
+
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
+        // -----------------------------------------------------------------------------------------
+        // |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
+        // | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
+        // | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
+        //             |     |      |     |   |     |      |      |
                         bindings = <
-&kp EXCL        &kp AT  &kp HASH        &kp DLLR        &kp PRCNT   &kp CARET   &kp AMPS        &kp ASTRK &kp LPAR        &kp RPAR
+        &kp EXCL        &kp AT  &kp HASH        &kp DLLR        &kp PRCNT   &kp CARET   &kp AMPS        &kp ASTRK &kp LPAR        &kp RPAR
         &kp N1          &kp N2  &kp N3          &kp N4          &kp N5          &kp N6          &kp N7          &kp N8                  &kp N9          &kp N0
         &trans          &trans  &trans          &trans          &trans      &kp MINUS   &kp EQUAL       &kp LBKT        &kp RBKT        &kp PIPE
-                                                &trans          &trans          &mo 4           &trans          &kp RET         &kp RALT
+                        &trans          &trans          &mo 4           &trans          &kp RET         &kp RALT
                         >;
                 };
 
                 sym_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
+        // -----------------------------------------------------------------------------------------
+        // |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
+        // |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
+        // |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
+        //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&kp EXCL &kp AT &kp HASH  &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR   &kp RPAR
-&kp F1  &kp F2  &kp F3    &kp F4   &kp F5      &kp MINUS   &kp EQUAL &kp LBKT        &kp RBKT   &kp PIPE
-&kp F6  &kp F7  &kp F8    &kp F9   &kp F10     &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC   &kp BSLH
-                &kp F11   &kp F12  &trans      &mo 4       &trans    &trans  
+        &kp EXCL &kp AT &kp HASH  &kp DLLR &kp PRCNT   &kp CARET   &kp AMPS  &kp KP_MULTIPLY &kp LPAR   &kp RPAR
+        &kp F1  &kp F2  &kp F3    &kp F4   &kp F5      &kp MINUS   &kp EQUAL &kp LBKT        &kp RBKT   &kp PIPE
+        &kp F6  &kp F7  &kp F8    &kp F9   &kp F10     &kp UNDER   &kp PLUS  &kp LBRC        &kp RBRC   &kp BSLH
+                        &kp F11   &kp F12  &trans      &mo 4       &trans    &trans  
                         >;
                 };
 
