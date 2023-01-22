@@ -27,7 +27,7 @@
 
         combo_ent {
             timeout-ms = <50>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
             bindings = <&kp RET>;
          };
 
