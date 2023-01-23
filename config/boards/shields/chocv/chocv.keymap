@@ -70,13 +70,13 @@
         
         combo_alt_del {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <6 7>;
             bindings = <&kp LALT(BSPC)>;
         };
 
                 combo_line_del {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <5 6>;
             bindings = <&kp LGUI(BSPC)>;
         };
 
