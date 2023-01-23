@@ -87,6 +87,12 @@
             bindings = <&sk (LSHIFT)>;
         };
 
+        combo_quote {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp SQT>;
+        };
+
         combo_rshift {
             timeout-ms = <50>;
             key-positions = <27 28>;
