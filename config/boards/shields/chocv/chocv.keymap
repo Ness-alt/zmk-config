@@ -50,6 +50,12 @@
             bindings = <&kp RET>;
          };
 
+        combo_Rent {
+            timeout-ms = <50>;
+            key-positions = <14 15>;
+            bindings = <&kp RET>;
+         };
+
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <7 8>;
