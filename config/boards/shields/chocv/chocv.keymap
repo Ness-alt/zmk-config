@@ -80,13 +80,6 @@
             bindings = <&kp LG(BSPC)>;
         };
 
-
-        combo_lshift {
-            timeout-ms = <50>;
-            key-positions = <21 22>;
-            bindings = <&sk (LSHIFT)>;
-        };
-
         combo_quote {
             timeout-ms = <50>;
             key-positions = <26 27>;
