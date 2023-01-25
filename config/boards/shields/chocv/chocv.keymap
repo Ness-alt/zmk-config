@@ -107,7 +107,7 @@
         combo_homerow {
             timeout-ms = <50>;
             key-positions = <21 22>;
-            bindings = <&kp LG(LS(SPACE))>;
+            bindings = <&kp LS(LG(SPACE))>;
         };
     };
 
