@@ -21,7 +21,7 @@
          };
 
           combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <25>;
             key-positions = <11 12>;
             bindings = <&kp ESC>;
          };
@@ -37,7 +37,7 @@
           combo_tilde {         
             timeout-ms = <50>;
             key-positions = <1 3>;
-            bindings = <&kp LG(TILDE)>;
+            bindings = <&kp LG(LS(GRAVE))>;
          };
 
         combo_ent {
@@ -87,11 +87,7 @@
             key-positions = <27 28>;
             bindings = <&sk RSHIFT>;
         };
-        combo_spotlight {
-            timeout-ms = <50>;
-            key-positions = <31 32>;
-            bindings = <&kp LG(SPACE)>;
-        };
+        
 
         combo_homerow {
             timeout-ms = <50>;
