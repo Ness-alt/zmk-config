@@ -21,7 +21,7 @@
          };
 
           combo_esc {
-            timeout-ms = <100>;
+            timeout-ms = <25>;
             key-positions = <11 12>;
             bindings = <&kp ESC>;
          };
@@ -41,7 +41,7 @@
          //};
 
         combo_ent {
-            timeout-ms = <100>;
+            timeout-ms = <25>;
             key-positions = <17 18>;
             bindings = <&kp RET>;
          };
