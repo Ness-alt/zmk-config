@@ -191,10 +191,10 @@ keymap {
         // |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
         //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans       &kp LGUI      &kp TAB   &kp LGTILDE        &trans    &trans &trans &trans &trans &trans
-   &trans       &trans      &trans        &trans        &trans    &trans &trans &trans &trans &trans
-   &trans       &trans      &trans        &trans        &trans    &trans &trans &trans &trans &trans
-                &trans      &trans        &trans        &trans    &trans &trans
+   &trans       &kp LGUI         &kp TAB   &kp TILDE        &trans    &trans &trans &trans &trans &trans
+   &trans       &trans           &trans        &trans        &trans    &trans &trans &trans &trans &trans
+   &trans       &trans          &trans        &trans        &trans    &trans &trans &trans &trans &trans
+                &trans          &trans        &trans        &trans    &trans &trans
                         >;
                 };
 
