@@ -13,8 +13,8 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano@1//zmk
     shield: crbn
-  - board: nice_nano_v2/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: chocv
 
