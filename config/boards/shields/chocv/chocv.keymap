@@ -20,7 +20,7 @@
             bindings = <&kp TAB>;
          };
 
-          combo_esc {
+          combo_del {
             timeout-ms = <25>;
             key-positions = <3 4>;
             bindings = <&kp DEL>;
@@ -114,6 +114,17 @@
         //&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT
 
 
+    behaviors {
+        lsz: lshift_z {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
         //
 keymap {
                 compatible = "zmk,keymap";
@@ -127,7 +138,7 @@ keymap {
                         bindings = <
         &kp Q        &lt 5 W   &kp E   &kp R   &kp T            &kp Y  &kp U   &kp I           &kp O           &kp P
         &lt 3 A      &kp S     &kp D   &kp F   &kp G            &kp H  &kp J   &kp K           &kp L           &kp SEMI
-        &mt LSHIFT Z &kp X     &kp C   &kp V   &kp B            &kp N  &kp M   &kp COMMA       &kp DOT         &mt RSHIFT FSLH
+        &lsz LSHIFT Z &kp X     &kp C   &kp V   &kp B            &kp N  &kp M   &kp COMMA       &kp DOT         &mt RSHIFT FSLH
         &mt LCTRL TAB &mt LGUI ESC   &lt 1 SPACE    &lt 2 SPACE   &mt RSHIFT RET   &mt RALT BSPC
                                 >; 
                         };
